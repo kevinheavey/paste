@@ -179,7 +179,7 @@ fn test_env_to_camel() {
         #[allow(non_upper_case_globals)]
         const [<LIB env!("CARGO_PKG_NAME"):camel>]: &str = "libpaste";
 
-        let _ = LIBCamelpaste;
+        let _ = LIBcamelpaste;
     }
 }
 

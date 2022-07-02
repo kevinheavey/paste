@@ -195,8 +195,12 @@ pub(crate) fn paste(segments: &[Segment]) -> Result<String> {
                     "camel" => {
                         let mut acc = String::new();
                         let mut prev = '_';
-                        for ch in last.chars() {
-                            if ch != '_' {
+                        for (idx, ch) in last.chars().enumerate() {
+                            if idx == 0 {
+                                for chl in ch.to_lowercase() {
+                                    acc.push(chl);
+                                }
+                            } else if ch != '_' {
                                 if prev == '_' {
                                     for chu in ch.to_uppercase() {
                                         acc.push(chu);

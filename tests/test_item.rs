@@ -155,7 +155,7 @@ mod test_to_camel {
 
     #[test]
     fn test_to_camel() {
-        assert_eq!(DEFAULT_CAMEL, "ThisIsButATest");
+        assert_eq!(DEFAULT_CAMEL, "thisIsButATest");
         assert_eq!(LOWER_CAMEL, "thisisbutatest");
         assert_eq!(UPPER_CAMEL, "THISISBUTATEST");
     }
