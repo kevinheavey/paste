@@ -1,6 +1,6 @@
 [package]
 name = "camelpaste"
-version = "1.0.7"
+version = "0.1.0"
 authors = ["David Tolnay <dtolnay@gmail.com>", "Kevin Heavey <kevinheavey123@gmail.com>"]
 edition = "2018"
 rust-version = "1.31"
