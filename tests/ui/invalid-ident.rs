@@ -1,4 +1,4 @@
-use paste::paste;
+use camelpaste::paste;
 
 paste! {
     fn [<0 f>]() {}

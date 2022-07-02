@@ -1,5 +1,4 @@
-Macros for all your token pasting needs
-=======================================
+# Macros for all your token pasting needs
 
 [<img alt="github" src="https://img.shields.io/badge/github-dtolnay/paste-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/dtolnay/paste)
 [<img alt="crates.io" src="https://img.shields.io/crates/v/paste.svg?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/paste)
@@ -30,7 +29,7 @@ Within the `paste!` macro, identifiers inside `[<`...`>]` are pasted together to
 form a single identifier.
 
 ```rust
-use paste::paste;
+use camelpaste::paste;
 
 paste! {
     // Defines a const called `QRST`.
@@ -51,10 +50,10 @@ fn main() {
 
 The next example shows a macro that generates accessor methods for some struct
 fields. It demonstrates how you might find it useful to bundle a paste
-invocation inside of a macro\_rules macro.
+invocation inside of a macro_rules macro.
 
 ```rust
-use paste::paste;
+use camelpaste::paste;
 
 macro_rules! make_a_struct_and_getters {
     ($name:ident { $($field:ident),* }) => {
@@ -102,12 +101,11 @@ fn call_some_getters(s: &S) -> bool {
 ## Case conversion
 
 Use `$var:lower` or `$var:upper` in the segment list to convert an interpolated
-segment to lower- or uppercase as part of the paste. For example, `[<ld_
-$reg:lower _expr>]` would paste to `ld_bc_expr` if invoked with $reg=`Bc`.
+segment to lower- or uppercase as part of the paste. For example, `[<ld_ $reg:lower _expr>]` would paste to `ld_bc_expr` if invoked with $reg=`Bc`.
 
-Use `$var:snake` to convert CamelCase input to snake\_case.
-Use `$var:camel` to convert snake\_case to CamelCase.
-These compose, so for example `$var:snake:upper` would give you SCREAMING\_CASE.
+Use `$var:snake` to convert CamelCase input to snake_case.
+Use `$var:camel` to convert snake_case to CamelCase.
+These compose, so for example `$var:snake:upper` would give you SCREAMING_CASE.
 
 The precise Unicode conversions are as defined by [`str::to_lowercase`] and
 [`str::to_uppercase`].
@@ -123,7 +121,7 @@ Within the `paste!` macro, arguments to a #\[doc ...\] attribute are implicitly
 concatenated together to form a coherent documentation string.
 
 ```rust
-use paste::paste;
+use camelpaste::paste;
 
 macro_rules! method_new {
     ($ret:ident) => {

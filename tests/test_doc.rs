@@ -1,4 +1,4 @@
-use paste::paste;
+use camelpaste::paste;
 
 #[test]
 fn test_paste_doc() {

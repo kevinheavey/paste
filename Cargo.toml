@@ -1,12 +1,12 @@
 [package]
-name = "paste"
+name = "camelpaste"
 version = "1.0.7"
-authors = ["David Tolnay <dtolnay@gmail.com>"]
+authors = ["David Tolnay <dtolnay@gmail.com>", "Kevin Heavey <kevinheavey123@gmail.com>"]
 edition = "2018"
 rust-version = "1.31"
 license = "MIT OR Apache-2.0"
-description = "Macros for all your token pasting needs"
-repository = "https://github.com/dtolnay/paste"
+description = "A fork of paste using lowerCamelCase (hopefully temporary)"
+repository = "https://github.com/kevinheavey/paste"
 categories = ["no-std"]
 readme = "README.md"
 

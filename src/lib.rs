@@ -25,7 +25,7 @@
 //! together to form a single identifier.
 //!
 //! ```
-//! use paste::paste;
+//! use camelpaste::paste;
 //!
 //! paste! {
 //!     // Defines a const called `QRST`.
@@ -49,7 +49,7 @@
 //! paste invocation inside of a macro\_rules macro.
 //!
 //! ```
-//! use paste::paste;
+//! use camelpaste::paste;
 //!
 //! macro_rules! make_a_struct_and_getters {
 //!     ($name:ident { $($field:ident),* }) => {
@@ -121,7 +121,7 @@
 //! implicitly concatenated together to form a coherent documentation string.
 //!
 //! ```
-//! use paste::paste;
+//! use camelpaste::paste;
 //!
 //! macro_rules! method_new {
 //!     ($ret:ident) => {

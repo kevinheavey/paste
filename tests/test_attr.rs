@@ -1,4 +1,4 @@
-use paste::paste;
+use camelpaste::paste;
 use paste_test_suite::paste_test;
 
 #[test]

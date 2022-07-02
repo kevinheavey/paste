@@ -1,4 +1,4 @@
-use paste::paste;
+use camelpaste::paste;
 
 paste! {
     fn [<x 1e+100 z>]() {}
